@@ -34,12 +34,13 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 flex-col sm:flex-row mb-8">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 px-8 py-3">
-              Start Free Trial
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 px-8 py-3"
+              onClick={() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Start Chat
               <ArrowRight className="ml-2" size={18} />
-            </Button>
-            <Button size="lg" variant="outline" className="border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/6 px-8 py-3">
-              Watch Demo
             </Button>
           </div>
 
@@ -62,7 +63,7 @@ export default function Hero() {
 
         {/* Right column: chat mockup */}
         <div className={`transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          <div className="relative w-full max-w-md mx-auto lg:mx-0 mockchat-outer">
+          <div id="chat" className="relative w-full max-w-md mx-auto lg:mx-0 mockchat-outer">
             <div className="mockchat-mask"></div>
             <div className="mockchat-glow"></div>
 

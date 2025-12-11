@@ -276,10 +276,4 @@ main, header, footer, section, .max-w-7xl {
   opacity: 0.96;
 }
 
-/* Stop showing the grid for the Pricing section and everything below it */
-#pricing,
-#pricing ~ * {
-  position: relative;
-  z-index: 20; /* sit above the global grid */
-  background-image: linear-gradient(180deg, rgba(8,10,12,1) 0%, rgba(12,13,14,1) 100%);
-}
+/* Note: pricing section removed — grid covers full page by default */

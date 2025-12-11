@@ -22,17 +22,17 @@ const faqs = [
   {
     question: "Can I customize the AI's behavior?",
     answer:
-      "Yes, you can customize tone, personality, knowledge base, and response style. Pro and Enterprise plans include dedicated support for advanced customizations.",
+      "Yes, you can customize tone, personality, knowledge base, and response style. We offer customization and dedicated support for advanced needs—reach out if you need help tailoring the assistant to your workflows.",
   },
   {
     question: "What's the implementation time?",
     answer:
-      "Basic setup takes 5-10 minutes. Full integration with custom workflows typically takes 1-2 hours. Our team provides guided implementation for Enterprise customers.",
+      "Basic setup takes 5-10 minutes. Full integration with custom workflows typically takes 1-2 hours. Our team provides guided implementation for larger deployments and organizations that need extra assistance.",
   },
   {
-    question: "Is there a free trial?",
+    question: "Do I need to pay or sign up to use NexaChat?",
     answer:
-      "Yes, all new accounts get a 14-day free trial with full access to Pro features. No credit card required to get started.",
+      "No — NexaChat is completely free to use. There are no paid tiers, no free trials, and no credit card required. You can start chatting immediately without creating an account.",
   },
 ]
 

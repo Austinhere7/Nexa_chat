@@ -13,22 +13,15 @@ export const metadata: Metadata = {
   description:
     "Experience the next generation of AI chatbot. Lightning-fast responses, smart learning, and seamless integration.",
   generator: "v0.app",
+  // Use a transparent SVG data URI so the browser tab shows no visible image.
+  // This avoids deleting existing files in `public/` while ensuring no picture appears.
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3C/svg%3E",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
   },
 }
 

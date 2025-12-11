@@ -24,24 +24,15 @@ export default function Navbar() {
             <a href="#features" className="text-gray-300 hover:text-cyan-400 transition">
               Features
             </a>
-            <a href="#pricing" className="text-gray-300 hover:text-cyan-400 transition">
-              Pricing
-            </a>
             <a href="#faq" className="text-gray-300 hover:text-cyan-400 transition">
               FAQ
             </a>
             <Button
-              variant="outline"
-              size="sm"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 bg-transparent"
-            >
-              Sign In
-            </Button>
-            <Button
               size="sm"
               className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 hover:shadow-lg hover:shadow-cyan-500/50"
+              onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get Started
+              Start Chat
             </Button>
           </div>
 
@@ -57,18 +48,16 @@ export default function Navbar() {
             <a href="#features" className="block text-gray-300 hover:text-cyan-400">
               Features
             </a>
-            <a href="#pricing" className="block text-gray-300 hover:text-cyan-400">
-              Pricing
-            </a>
             <a href="#faq" className="block text-gray-300 hover:text-cyan-400">
               FAQ
             </a>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" className="flex-1 border-cyan-500/50 text-cyan-400 bg-transparent">
-                Sign In
-              </Button>
-              <Button size="sm" className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0">
-                Get Started
+              <Button
+                size="sm"
+                className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0"
+                onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Start Chat
               </Button>
             </div>
           </div>

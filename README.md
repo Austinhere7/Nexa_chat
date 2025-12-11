@@ -19,7 +19,7 @@
 - **Intelligent Conversation Engine** - Powered by GPT-4 & Claude for smart, contextual responses
 - **Real-time Chat** - Instant messaging with live conversation history
 - **Multi-Modal Support** - Handle text, documents, and code snippets seamlessly
-- **User Authentication** - Secure login with role-based access control
+- **Free Access** - No login required; core features are free to all users
 - **Message History** - Persistent conversation storage and retrieval
 
 ### ✨ UI/UX Excellence
@@ -49,11 +49,11 @@
 - **Form Handling**: React Hook Form + Zod Validation
 - **Animations**: Tailwind CSS + Custom Keyframes
 
-### Backend
+## Backend
 
 - **Runtime**: Node.js with Next.js API Routes
 - **Database**: PostgreSQL (schema pending)
-- **Authentication**: Next-Auth (implementation pending)
+- **Access**: No login required — the site and chat are publicly accessible
 - **AI Integration**: OpenAI GPT-4 & Anthropic Claude APIs
 
 ### Development Tools
@@ -115,7 +115,7 @@ Nexa_chat/
 │   ├── hero.tsx             # Hero section (2-col layout, chat mockup)
 │   ├── navbar.tsx           # Navigation bar
 │   ├── features.tsx         # Features section
-│   ├── pricing.tsx          # Pricing plans
+│   ├── (no pricing)         # The app is free to all users
 │   ├── testimonials.tsx     # User testimonials
 │   ├── faq.tsx              # FAQ section
 │   ├── cta.tsx              # Call-to-action
@@ -212,8 +212,6 @@ Reusable button with variants:
 ```
 /api/chat          - Send chat messages
 /api/conversations - Manage chat history
-/api/auth          - Authentication endpoints
-/api/user          - User profile management
 ```
 
 ## Performance Optimizations
@@ -243,7 +241,6 @@ We welcome contributions! Please follow these steps:
 
 ## Roadmap
 
-- [ ] User Authentication System
 - [ ] Database Integration (PostgreSQL)
 - [ ] API Integration (OpenAI, Anthropic)
 - [ ] Conversation Persistence

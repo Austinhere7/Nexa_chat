@@ -29,11 +29,6 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-cyan-400 transition">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-cyan-400 transition">
                   Security
                 </a>
               </li>

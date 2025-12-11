@@ -22,20 +22,14 @@ export default function CTA() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 hover:shadow-lg hover:shadow-cyan-500/50 px-8"
+            onClick={() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Start Free Trial
+            Start Chat
             <ArrowRight className="ml-2" size={20} />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 bg-transparent"
-          >
-            Schedule Demo
           </Button>
         </div>
 
-        <p className="text-gray-400 text-sm mt-8">14-day free trial. No credit card required. Cancel anytime.</p>
+        <p className="text-gray-400 text-sm mt-8">NexaChat is completely free to use — no signup or payment required.</p>
       </div>
     </section>
   )
