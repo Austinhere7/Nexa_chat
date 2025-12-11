@@ -1,0 +1,285 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.58 0.2 262.6);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.48 0.15 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.32 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.56 0.213 262.5);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.22 0 0);
+  --input: oklch(0.18 0 0);
+  --ring: oklch(0.56 0.213 262.5);
+  --chart-1: oklch(0.56 0.213 262.5);
+  --chart-2: oklch(0.56 0.15 190);
+  --chart-3: oklch(0.48 0.18 180);
+  --chart-4: oklch(0.65 0.2 270);
+  --chart-5: oklch(0.58 0.15 280);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.58 0.2 262.6);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.48 0.15 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.32 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.56 0.213 262.5);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.22 0 0);
+  --input: oklch(0.18 0 0);
+  --ring: oklch(0.56 0.213 262.5);
+  --chart-1: oklch(0.56 0.213 262.5);
+  --chart-2: oklch(0.56 0.15 190);
+  --chart-3: oklch(0.48 0.18 180);
+  --chart-4: oklch(0.65 0.2 270);
+  --chart-5: oklch(0.58 0.15 280);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Site-wide background: dark gradient, animated color grading, grid overlay, vignette and subtle noise */
+@keyframes bgColorShift {
+  0% { background-position: 0% 50%; filter: saturate(0.95) brightness(0.9); }
+  50% { background-position: 100% 50%; filter: saturate(1.05) brightness(1.05); }
+  100% { background-position: 0% 50%; filter: saturate(0.95) brightness(0.9); }
+}
+
+body {
+  /* base dark canvas similar to screenshot */
+  background-color: #06070a; /* fallback */
+  background-image: radial-gradient(1200px 600px at 85% 35%, rgba(6,30,30,0.18), transparent 15%),
+                    radial-gradient(900px 400px at 15% 65%, rgba(40,10,50,0.08), transparent 20%),
+                    linear-gradient(180deg, rgba(8,10,12,1) 0%, rgba(10,11,13,1) 100%);
+  background-blend-mode: screen, screen, normal;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* animated subtle moving color overlay to simulate live color grading */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(4,210,196,0.03) 0%, rgba(56,189,248,0.04) 30%, rgba(139,92,246,0.03) 65%, rgba(139,92,246,0.02) 100%);
+  background-size: 200% 200%;
+  mix-blend-mode: screen;
+  animation: bgColorShift 18s ease-in-out infinite;
+}
+
+/* Grid overlay to match screenshot's subtle square grid */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2; /* sit above the color grading overlay so grid is very visible */
+  pointer-events: none;
+  /* cyan-tinged fine grid + larger faint checker tiles to match screenshot */
+  background-image: linear-gradient(rgba(16,185,170,0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(16,185,170,0.08) 1px, transparent 1px),
+                    repeating-linear-gradient(0deg, rgba(16,185,170,0.02) 0 1px, transparent 1px 56px),
+                    repeating-linear-gradient(90deg, rgba(16,185,170,0.02) 0 1px, transparent 1px 56px);
+  background-size: 48px 48px, 48px 48px, 112px 112px, 112px 112px;
+  opacity: 1;
+  mix-blend-mode: normal; /* render clearly over the dark canvas */
+  transform: translateZ(0);
+}
+
+/* Local brighter grid area to sit behind the chat card for stronger visibility */
+/* localized grid accent removed to rely on stronger global grid */
+
+/* Add a faint vignette / darker edges */
+.bg-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(60% 40% at 10% 80%, rgba(0,0,0,0.08), transparent 10%), radial-gradient(80% 60% at 90% 10%, rgba(0,0,0,0.18), transparent 20%), radial-gradient(circle at center, rgba(0,0,0,0.04), transparent 35%);
+}
+
+/* subtle film grain/noise to prevent flat gradients */
+.bg-noise {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" fill="black"/></svg>');
+}
+
+/* Ensure main content stacks above these background layers */
+main, header, footer, section, .max-w-7xl {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Rectangular glow animation used behind the mock chat card */
+@keyframes rectGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.985);
+    filter: brightness(0.85) saturate(0.95);
+    background-position: 0% 50%;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: brightness(1.35) saturate(1.15);
+    background-position: 100% 50%;
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.985);
+    filter: brightness(0.85) saturate(0.95);
+    background-position: 0% 50%;
+  }
+}
+
+.mockchat-glow {
+  position: absolute;
+  inset: -1.5rem; /* extend beyond the card to form a soft rectangular glow */
+  border-radius: 1.25rem;
+  pointer-events: none;
+  z-index: 6; /* sit above page overlays but below the chat card */
+  /* multi-stop gradient that will subtly shift during animation */
+  background: linear-gradient(90deg, rgba(16,185,129,0.08) 0%, rgba(14,165,233,0.10) 30%, rgba(124,58,237,0.09) 65%, rgba(99,102,241,0.06) 100%);
+  mix-blend-mode: screen; /* blends neon glow with underlying animated overlay */
+  filter: blur(24px) contrast(1.02) saturate(1.06);
+  animation: rectGlow 4s ease-in-out infinite;
+  will-change: transform, opacity, filter, background-position;
+}
+
+/* Slightly stronger variant when you want more intense glow */
+.mockchat-glow--intense {
+  animation-duration: 2.2s;
+  filter: blur(36px) contrast(1.18) saturate(1.2) brightness(1.08);
+  box-shadow: 0 0 48px rgba(16,185,129,0.28), 0 0 100px rgba(14,165,233,0.18);
+}
+
+/* Hover-intensify when the mock chat container is hovered */
+.mockchat-outer .mockchat-glow {
+  transition: filter 220ms ease, transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease, animation-duration 220ms ease;
+}
+.mockchat-outer:hover .mockchat-glow {
+  animation-duration: 2.2s;
+  filter: blur(36px) contrast(1.18) saturate(1.2) brightness(1.08);
+  transform: scale(1.035);
+  box-shadow: 0 0 48px rgba(16,185,129,0.32), 0 0 120px rgba(14,165,233,0.22), inset 0 0 24px rgba(16,185,129,0.08);
+  opacity: 1;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body::before, .mockchat-glow { animation: none !important; transition: none !important; }
+}
+
+/* Mask to hide the global grid inside the rectangular mockchat glow area */
+.mockchat-mask {
+  position: absolute;
+  inset: -1.5rem;
+  border-radius: 1.25rem;
+  pointer-events: none;
+  z-index: 5; /* above global grid but below glow */
+  background-image: radial-gradient(1200px 600px at 85% 35%, rgba(6,30,30,0.18), transparent 15%),
+                    radial-gradient(900px 400px at 15% 65%, rgba(40,10,50,0.08), transparent 20%),
+                    linear-gradient(180deg, rgba(8,10,12,1) 0%, rgba(10,11,13,1) 100%);
+  background-blend-mode: screen, screen, normal;
+  opacity: 0.96;
+}
+
+/* Stop showing the grid for the Pricing section and everything below it */
+#pricing,
+#pricing ~ * {
+  position: relative;
+  z-index: 20; /* sit above the global grid */
+  background-image: linear-gradient(180deg, rgba(8,10,12,1) 0%, rgba(12,13,14,1) 100%);
+}
