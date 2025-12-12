@@ -46,18 +46,29 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="md:hidden pb-4 border-t border-cyan-500/10 space-y-4">
-            <a href="#features" className="block text-gray-300 hover:text-cyan-400">
+          <div className="md:hidden pb-4 pt-4 border-t border-cyan-500/10 space-y-4">
+            <a 
+              href="#features" 
+              className="block text-gray-300 hover:text-cyan-400 transition py-2"
+              onClick={() => setIsOpen(false)}
+            >
               Features
             </a>
-            <a href="#faq" className="block text-gray-300 hover:text-cyan-400">
+            <a 
+              href="#faq" 
+              className="block text-gray-300 hover:text-cyan-400 transition py-2"
+              onClick={() => setIsOpen(false)}
+            >
               FAQ
             </a>
-            <div className="flex gap-2">
+            <div className="flex gap-2 pt-2">
               <Button
                 size="sm"
                 className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0"
-                onClick={() => router.push('/chat')}
+                onClick={() => {
+                  setIsOpen(false)
+                  router.push('/chat')
+                }}
               >
                 Start Chat
               </Button>

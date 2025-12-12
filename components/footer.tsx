@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -103,6 +103,9 @@ export default function Footer() {
           <div className="flex gap-4">
             <a href="#" className="text-gray-400 hover:text-cyan-400 transition">
               <Twitter size={20} />
+            </a>
+            <a href="https://www.instagram.com/__austiii__/#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition">
+              <Instagram size={20} />
             </a>
             <a href="#" className="text-gray-400 hover:text-cyan-400 transition">
               <Linkedin size={20} />
