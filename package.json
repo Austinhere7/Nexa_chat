@@ -1,20 +1,20 @@
 {
   "name": "nexa-chat",
   "version": "0.1.0",
-  "description": "Next-generation AI assistant platform powered by GPT-4 & Claude with beautiful, animated UI",
+  "description": "Next-generation AI assistant platform powered by Groq AI with beautiful, animated UI",
   "author": "Austinhere7",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Austinhere7/Nexa_chat.git"
   },
-  "homepage": "https://github.com/Austinhere7/Nexa_chat",
+  "homepage": "https://nexa-chatai.vercel.app",
   "keywords": [
     "ai",
     "chatbot",
     "conversational-ai",
-    "gpt-4",
-    "claude",
+    "groq",
+    "llama",
     "next.js",
     "react",
     "tailwindcss"

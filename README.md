@@ -6,10 +6,13 @@
 
 **Your AI Assistant, Reimagined** — Experience the next generation of conversational AI. Intelligent, intuitive, and designed to transform how you work and create.
 
+🚀 **[Live Demo](https://nexa-chatai.vercel.app/)** | 📖 **[Documentation](#getting-started)** | 🐛 **[Report Bug](https://github.com/Austinhere7/Nexa_chat/issues)**
+
 [![GitHub](https://img.shields.io/badge/GitHub-Nexa_chat-blue?logo=github)](https://github.com/Austinhere7/Nexa_chat)
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 [![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?logo=next.js)](https://nextjs.org)
 [![Groq](https://img.shields.io/badge/Powered%20by-Groq-orange)](https://groq.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://nexa-chatai.vercel.app/)
 
 </div>
 
@@ -80,6 +83,13 @@
 - **Build Tool**: Turbopack (Next.js bundler)
 - **Linting**: ESLint
 - **Hot Reload**: Fast Refresh with Next.js
+- **Deployment**: [Vercel](https://vercel.com)
+
+## Live Deployment
+
+🌐 **Production URL**: [https://nexa-chatai.vercel.app/](https://nexa-chatai.vercel.app/)
+
+The application is deployed on Vercel with automatic deployments from the `main` branch. Every push to the repository triggers a new build and deployment.
 
 ## Getting Started
 
@@ -184,6 +194,31 @@ pnpm start
 # Run linting
 pnpm lint
 ```
+
+### Deployment to Vercel
+
+The application is automatically deployed to [https://nexa-chatai.vercel.app/](https://nexa-chatai.vercel.app/) when changes are pushed to the `main` branch.
+
+**Manual Deployment via Vercel CLI:**
+
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to production
+vercel --prod
+```
+
+**Environment Variables on Vercel:**
+
+1. Go to your project on [Vercel Dashboard](https://vercel.com/dashboard)
+2. Navigate to Settings → Environment Variables
+3. Add `GROQ_API_KEY` with your API key value
+4. Select all environments (Production, Preview, Development)
+5. Redeploy for changes to take effect
 
 ### Git Workflow
 
