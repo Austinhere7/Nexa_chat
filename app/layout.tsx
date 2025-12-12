@@ -12,20 +12,14 @@ export const metadata: Metadata = {
   title: "NexaChat - AI-Powered Conversations",
   description:
     "Experience the next generation of AI chatbot. Lightning-fast responses, smart learning, and seamless integration.",
-  generator: "v0.app",
-  // Default favicon used in hosted preview/tab. Change to any other file in `public/` if desired.
   icons: {
     icon: [
       {
-        url: "/placeholder-logo.png",
-        type: "image/png",
-      },
-      {
-        url: "/icon.svg",
+        url: "/favicon.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/favicon.svg",
   },
 }
 
