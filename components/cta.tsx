@@ -1,9 +1,11 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export default function CTA() {
+  const router = useRouter()
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background effect */}
@@ -22,7 +24,7 @@ export default function CTA() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 hover:shadow-lg hover:shadow-cyan-500/50 px-8"
-            onClick={() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => router.push("/chat")}
           >
             Start Chat
             <ArrowRight className="ml-2" size={20} />

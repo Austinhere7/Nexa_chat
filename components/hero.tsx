@@ -1,11 +1,13 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     setIsLoaded(true)
@@ -37,7 +39,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 px-8 py-3"
-              onClick={() => document.getElementById("chat")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => router.push("/chat")}
             >
               Start Chat
               <ArrowRight className="ml-2" size={18} />

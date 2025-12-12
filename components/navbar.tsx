@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
 
   return (
     <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-background/40 border-b border-cyan-500/10">
@@ -30,7 +32,7 @@ export default function Navbar() {
             <Button
               size="sm"
               className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0 hover:shadow-lg hover:shadow-cyan-500/50"
-              onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => router.push('/chat')}
             >
               Start Chat
             </Button>
@@ -55,7 +57,7 @@ export default function Navbar() {
               <Button
                 size="sm"
                 className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white border-0"
-                onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => router.push('/chat')}
               >
                 Start Chat
               </Button>
