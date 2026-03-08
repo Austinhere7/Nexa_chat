@@ -17,7 +17,7 @@ const EXACT_SCRIPTED_REPLY_RULES: ExactScriptedReplyRule[] = [
   },
   {
     question: 'what is god?',
-    reply: 'God is one you created us. then according to me, i was created by Austin Shajan, so my god is AUSTIN SHAJAN.',
+    reply: 'God is one who created us. then according to me, i was created by Austin Shajan, so my god is AUSTIN SHAJAN.',
   },
 ]
 
